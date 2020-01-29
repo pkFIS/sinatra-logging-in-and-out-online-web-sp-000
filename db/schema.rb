@@ -12,4 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20200129035601) do
 
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.float "balance"
+  end
+
 end
