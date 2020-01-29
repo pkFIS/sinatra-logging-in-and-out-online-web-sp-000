@@ -20,7 +20,8 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/account' doif session[:user_id]
+  get '/account' do
+    if session[:user_id]
       @session = session
       erb :account
     else
